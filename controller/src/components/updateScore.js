@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import socketIOClient from "socket.io-client"
-
+import './updateScore.css'
 export class updateScore extends Component {
     constructor(props) {
         super(props);
@@ -29,7 +29,7 @@ export class updateScore extends Component {
     }
     render() {
         return (
-        <form onSubmit={this.handleSubmit}>
+        <form className="updateForm" onSubmit={this.handleSubmit}>
             <label>
               Đội 1
               <input type="text" value={this.state.score1} onChange={this.HandleScore1Change} />
@@ -42,7 +42,7 @@ export class updateScore extends Component {
               Đội 3
               <input type="text" value={this.state.score3} onChange={this.HandleScore3Change} />
             </label>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Cập nhật điểm" />
         </form>
         )
     }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import socketIOClient from "socket.io-client"
+import "./score.css"
 export default class score extends Component {
     state= {
        scoresList:[],
@@ -13,15 +14,15 @@ export default class score extends Component {
     }
     render() {
         return (
-            <>{
+            <div className="scoresList">{
                 this.state.scoresList.map((scoresList)=>(
-                    <div key={scoresList.team} className="scoresList">
+                    <div key={scoresList.team} >
                         <div  className = "teamName"> {scoresList.team}</div>
-                        <div className = "score"> {scoresList.score}</div>
+                        <div className = "score">{scoresList.score}</div>
                     </div >
                 ))
             }
-            </>
+            </div>
         )
     }
 }

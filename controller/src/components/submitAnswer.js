@@ -13,22 +13,16 @@ export default class SubmitAnswer extends Component {
       handleValueChange = (event) => {
         this.setState({value: event.target.value});
       }
-    
       handleSubmit =(event) => {
         const socket = socketIOClient(this.state.endpoint ,{transports: ['websocket']});
         let data = {}
-        data.name = this.state.name
-        data.value = this.state.value
+        data.team = this.state.name
+        data.score = this.state.value
         socket.emit('submitAnswer', data)
         // alert('A name was submitted: ' + data);
         event.preventDefault();
       }
-    
       render() {
-        // const socket = socketIOClient(this.state.endpoint ,{transports: ['websocket']});
-        // socket.on('connection', () => {
-        //   console.log(`I'm connected with the back-end`);
-        // })
         return (
           <form onSubmit={this.handleSubmit}>
             <label>
@@ -39,7 +33,7 @@ export default class SubmitAnswer extends Component {
               Đáp án:
               <input type="text" value={this.state.answer} onChange={this.handleValueChange} />
             </label>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit"  />
           </form>
         );
       }

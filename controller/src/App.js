@@ -1,19 +1,16 @@
-import React, { useState, useEffect, Component } from "react";
-import Countdown from "./components/countDown";
-import ControlPanel from "./components/controlPanel"
-import UpdateScore from "./components/updateScore"
-import Score from "./components/score"
-import Announcement from "./components/announcement"
-export default class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Score/>
-        <Announcement/>
-        <UpdateScore/>
-        <ControlPanel/>
-      </div>
-
-    );
-  }
+import React, {Component } from "react";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Controller from './pages/controller'
+import Viewer from './pages/viewer'
+import Contestant from './pages/contestant'
+export default function App (){
+  return (
+    <Router>
+        <Switch>
+            <Route path="/" exact component={Viewer} />
+            <Route path="/controller" component={Controller} />
+            <Route path="/contestant" component={Contestant} />
+        </Switch>
+    </Router>
+);
 }

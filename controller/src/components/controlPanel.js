@@ -9,7 +9,7 @@ export class controlPanel extends Component {
     handleStart = (event)=>{
         const socket = socketIOClient(this.state.endpoint ,{transports: ['websocket']});
         let status = 'start'
-        socket.emit('nmtc-start', status)
+        socket.emit('nmtc-status', status)
         event.preventDefault();
     }
     handleShowCipher = (event)=>{
@@ -21,7 +21,7 @@ export class controlPanel extends Component {
     handlePause = (event)=>{
         const socket = socketIOClient(this.state.endpoint ,{transports: ['websocket']});
         let status = 'pause'
-        socket.emit('nmtc-pause', status)
+        socket.emit('nmtc-status', status)
         event.preventDefault();
     }
     handleShowKey = (event)=>{
@@ -51,6 +51,7 @@ export class controlPanel extends Component {
             <button onClick={this.handlePause}>Tạm Dừng</button>
             <button onClick={this.handleShowCipher}>Hiện Mã</button>
             <button onClick={this.handleShowKey}>Hiện Khóa</button>
+            <br/>
             <button onClick={this.handleShowAnswer}>Hiện Đáp Án</button>
             <button onClick={this.handleShowTeam("1")}>Đội 1</button>
             <button onClick={this.handleShowTeam("2")}>Đội 2</button>

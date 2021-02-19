@@ -1,13 +1,24 @@
 import React, { Component } from "react";
 import "../App.css";
+import socketIOClient from "socket.io-client"
 
-class countDown extends Component {
+class setTime extends Component {
   state = {
     timerOn: false,
     timerStart: 0,
     timerTime: 0,
-    timerValue: ''
+    timerValue: '',
+    endpoint:"http://localhost:4000"
   };
+  componentDidMount(){
+    const socket = socketIOClient(this.state.endpoint,{transports: ['websocket']})
+    socket.on('nmtc-status', (state) =>{
+      if(state == 'pause')
+      this.stopTimer()
+      else if (state == 'start')
+      this.startTimer()
+    })
+  }
 
   startTimer = () => {
     this.setState({
@@ -16,7 +27,7 @@ class countDown extends Component {
       timerStart: this.state.timerTime
     });
     this.timer = setInterval(() => {
-      const newTime = this.state.timerTime - 10;
+      let newTime = this.state.timerTime - 10;
       if (newTime >= 0) {
         this.setState({
           timerTime: newTime
@@ -57,19 +68,17 @@ class countDown extends Component {
 
   handleClick= ()=> {
     this.setTimer(this.state.timerValue)
+    const socket = socketIOClient(this.state.endpoint, {transports: ['websocket']})
+    socket.emit('nmtc-set-time', this.state.timerTime);
   }
 
   render() {
-    const { timerTime, timerStart, timerOn } = this.state;
+    const { timerTime } = this.state;
     let seconds = ("0" + (Math.floor((timerTime / 1000) % 60) % 60)).slice(-2);
     let minutes = ("0" + Math.floor((timerTime / 60000) % 60)).slice(-2);
-    let hours = ("0" + Math.floor((timerTime / 3600000) % 60)).slice(-2);
 
     return (
-      
       <div className="Countdown">
-        <div className="Countdown-header">Countdown</div>
-        
         <div className="Countdown-display">
         <div>
         <input type="text" onChange={this.handleChange} />
@@ -79,37 +88,11 @@ class countDown extends Component {
       </div>
           
           <div className="Countdown-time">
-            {hours} : {minutes} : {seconds}
+            {minutes} : {seconds}
           </div>
         </div>
-
-        {timerOn === false && (timerStart === 0 || timerTime === timerStart) && (
-          <button className="Button-start" onClick={this.startTimer}>
-            Start
-          </button>
-        )}
-        
-        {timerOn === true && timerTime >= 1000 && (
-          <button className="Button-stop" onClick={this.stopTimer}>
-            Stop
-          </button>
-        )}
-        {timerOn === false &&
-          (timerStart !== 0 && timerStart !== timerTime && timerTime !== 0) && (
-            <button className="Button-start" onClick={this.startTimer}>
-              Resume
-            </button>
-          )}
-
-        {(timerOn === false || timerTime < 1000) &&
-          (timerStart !== timerTime && timerStart > 0) && (
-            <button className="Button-reset" onClick={this.resetTimer}>
-              Reset
-            </button>
-          )}
       </div>
     );
   }
 }
-
-export default countDown;
+export default setTime;
