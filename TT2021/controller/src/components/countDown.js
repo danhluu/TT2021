@@ -48,10 +48,14 @@ class CountDown extends Component {
     let minutes = ("0" + Math.floor((timerTime / 60000) % 60)).slice(-2);
 
     return (
-      
+      <div>
+        
+      <div >
         <div className="Countdown-time">
            {minutes} : {seconds}
         </div>
+      </div>
+      </div>
     ); 
   }
 }

@@ -7,21 +7,17 @@ import SubmitAnswer from "../components/submitAnswer";
 export default class App extends Component {
   render() {
     return (
-      <>
+      <div className="App">
 
-        <link rel="stylesheet" href="./style.css"></link>
-        <link rel="stylesheet" href="images/..."></link>
-        <div className="App">
-          <img className='logo' src="logoTT.png" alt="logo thach thuc 2021"></img>
-          <div className="Timer-header">
-            <span class="title">Nối mạng toàn cầu</span>
-            <CountDown />
-          </div>
-          <div>
-            <SubmitAnswer />
-          </div>
+        <div className="Timer-header">
+          <span class="title">Nối mạng toàn cầu</span>
+          <CountDown />
         </div>
-      </>
+        <div>
+          <SubmitAnswer />
+        </div>
+      </div>
+
     );
   }
 }

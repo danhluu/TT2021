@@ -6,19 +6,19 @@
 
 .title {
   position: absolute;
-  left: 24.17%;
-  right: 24.18%;
+  left: 400px;
+  right: 400px;
   top: 20.15%;
-  bottom: 60.96%;
-  height: 200px;
+  bottom: 60px;
+  height: 150px;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 65px;
+  font-size: 60px;
   line-height: 112px;
   text-align: center;
-
   color: #FFFFFF;
+
 }
 
 .Timers {

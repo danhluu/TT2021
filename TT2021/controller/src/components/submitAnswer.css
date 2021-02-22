@@ -1,5 +1,5 @@
 * {
-    font-size: 60 px;
+    font-size: 40 px;
 
 }
 
@@ -7,16 +7,17 @@
     position: absolute;
     width: 430px;
     height: 35px;
-    left: 360px;
-    top: 500px;
-    background: blue;
+    left: 330px;
+    top: 420px;
+
 }
 
 .Submit-box {
     position: absolute;
     width: 100px;
     height: 35px;
-    left: 800px;
-    top: 500px;
+    left: 750px;
+    top: 420px;
     border: 2px solid #56CCF2;
+    background: linear-gradient(100.93deg, #185E93 0.01%, #185E93 0.17%, #0F4479 13.82%, #083164 28.77%, #042356 45.75%, #011A4E 66.27%, #00184B 100.02%);
 }
