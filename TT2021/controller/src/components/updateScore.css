@@ -1,0 +1,8 @@
+.updateForm{
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    margin:0 5%;
+}

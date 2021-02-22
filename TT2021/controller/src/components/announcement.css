@@ -1,0 +1,113 @@
+.Cipher {}
+
+.Key {}
+
+.Show-box {
+    position: absolute;
+    left: 19px;
+    right: 124px;
+    top: 20px;
+    bottom: 30px;
+    width: 420px;
+    height: 200px;
+    background: #0D2D5C;
+}
+
+.Cipher {
+    position: absolute;
+    left: 57px;
+    right: 251px;
+    top: 62px;
+    bottom: 145px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 7px;
+    /* identical to box height */
+
+
+    color: #F0F0F0;
+
+}
+
+.Button-box {
+    position: absolute;
+    width: 420px;
+    height: 120px;
+    left: 18px;
+    top: 162px;
+    border: rgb(61, 42, 165);
+    background: #050202;
+}
+
+.Button_start {
+    position: absolute;
+    width: 80px;
+    height: 35px;
+    left: 32px;
+    top: 20px;
+    background-color: green;
+}
+
+
+.Button_showCipher {
+    position: absolute;
+    width: 80px;
+    height: 35px;
+    left: 124px;
+    top: 20px;
+    color: green;
+}
+
+.Button_showKey {
+    position: absolute;
+    width: 80px;
+    height: 35px;
+    left: 216px;
+    top: 20px;
+    color: green;
+}
+
+.Button_showAnswer {
+    position: absolute;
+    width: 80px;
+    height: 35px;
+    left: 308px;
+    top: 20px;
+    color: green;
+}
+
+.Button_pause {
+    position: absolute;
+    width: 80px;
+    height: 35px;
+    left: 32px;
+    top: 70px;
+    color: green;
+}
+
+.Button_showTeam1 {
+    position: absolute;
+    width: 80px;
+    height: 35px;
+    left: 124px;
+    top: 70px;
+}
+
+.Button_showTeam2 {
+    position: absolute;
+    width: 80px;
+    height: 35px;
+    left: 216px;
+    top: 70px;
+}
+
+.Button_showTeam3 {
+    position: absolute;
+    width: 80px;
+    height: 35px;
+    left: 308px;
+    top: 70px;
+}

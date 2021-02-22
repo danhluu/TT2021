@@ -1,0 +1,9 @@
+.scoresList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 30%;
+    line-height: 150%;
+    font-size: 30px;
+    text-align: center;
+}

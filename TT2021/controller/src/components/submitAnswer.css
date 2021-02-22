@@ -1,0 +1,22 @@
+* {
+    font-size: 60 px;
+
+}
+
+.Input-box {
+    position: absolute;
+    width: 430px;
+    height: 35px;
+    left: 360px;
+    top: 500px;
+    background: blue;
+}
+
+.Submit-box {
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    left: 800px;
+    top: 500px;
+    border: 2px solid #56CCF2;
+}

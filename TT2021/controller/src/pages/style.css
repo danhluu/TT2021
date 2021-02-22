@@ -1,0 +1,158 @@
+* {
+  overflow-x: hidden;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.title {
+  position: absolute;
+  left: 24.17%;
+  right: 24.18%;
+  top: 20.15%;
+  bottom: 60.96%;
+  height: 200px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 65px;
+  line-height: 112px;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.Timers {
+  margin-left: 30px;
+  margin-right: 30px;
+  border: 2px solid grey;
+  border-radius: 4px;
+  padding: 20px;
+  width: 400px;
+  background-color: rgb(22, 27, 31);
+  box-shadow: 0 3px 6px rgb(12, 12, 12);
+}
+
+.Countdown-time {
+  font-size: 36px;
+  margin: 5px 0;
+  margin-left: 30px;
+  margin-right: 30px;
+  background-color: rgb(22, 27, 31);
+}
+
+.rect {
+  position: absolute;
+  height: 100px;
+  width: 1119.667236328125px;
+  left: 400px;
+  top: 436px;
+
+  background: rgba(255, 255, 255, 1);
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 56px;
+  line-height: 112px;
+  justify-content: center;
+  text-align: center;
+}
+
+.rect2 {
+  position: absolute;
+  left: 20.83%;
+  right: 20.85%;
+  top: 41.92%;
+  bottom: 41.88%;
+
+  background: rgba(255, 255, 255, 1);
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 112px;
+  justify-content: center;
+  text-align: center;
+}
+
+.border {
+  border: 10px solid;
+  border-image-source: linear-gradient(45deg, rgb(0, 253, 255), rgb(150, 0, 255), rgb(0, 253, 255), rgb(150, 0, 255));
+  border-image-slice: 1;
+
+}
+
+.submit {
+  position: absolute;
+  left: 43.62%;
+  right: 40.61%;
+  top: 61.77%;
+  bottom: 27.34%;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 84px;
+  text-align: center;
+
+  background: linear-gradient(100.93deg, #185E93 0.01%, #185E93 0.17%, #0F4479 13.82%, #083164 28.77%, #042356 45.75%, #011A4E 66.27%, #00184B 100.02%);
+
+  color: #FFFFFF;
+}
+
+.notice {
+  position: absolute;
+  left: 17.6%;
+  right: 18.75%;
+  top: 77.14%;
+  bottom: 12.84%;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.logo {
+  width: 240.75px;
+  height: 240px;
+  position: absolute;
+  left: 2.24%;
+  right: 85.22%;
+  top: 4.67%;
+  bottom: 71.98%;
+}
+
+.bk {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(24, 94, 147, 1),
+      rgba(9, 29, 74, 1),
+      rgba(4, 4, 46, 1),
+      rgba(35, 18, 91, 1),
+      rgba(4, 4, 46, 1));
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+Timer-header {
+  position: absolute;
+  left: 2.16%;
+  right: 2.16%;
+  top: 4.32%;
+  bottom: 4.32%;
+
+  background: #050202;
+  /* Blue 1 */
+
+  border: 1px solid #2F80ED;
+  box-sizing: border-box;
+}
